@@ -1,0 +1,21 @@
+.list-container {
+    margin: 10px;
+
+    table {
+        width: 100%;
+
+    }
+
+    .mat-column-Name, .mat-column-Group {
+        width: 20% !important;
+    }
+
+    .mat-column-Url {
+        width: 70% !important;
+    }
+
+    .mat-column-Action {
+        width: 10% !important;
+    }
+
+}

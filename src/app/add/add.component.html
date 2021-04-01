@@ -1,0 +1,34 @@
+<div class="add-container">
+    
+    <mat-card class="mat-elevation-z8">
+
+        <form class="example-form">
+            <p>
+                <mat-form-field class="full-width">
+                    <mat-label>Name</mat-label>
+                    <input matInput #name>
+                </mat-form-field>
+            </p>
+            
+            <p>
+                <mat-form-field class="full-width">
+                    <mat-label>Url</mat-label>
+                    <input matInput #url >
+                </mat-form-field>
+            </p>
+            
+            <p>
+                <mat-form-field class="full-width">
+                    <mat-label>Group</mat-label>
+                    <input matInput #group >
+                </mat-form-field>
+            </p>
+            
+        </form>    
+    
+        <button mat-raised-button color="primary" (click)="addBookmark( name.value, url.value, group.value)" >Add Bookmark</button>
+    
+
+    </mat-card>
+ 
+</div>
