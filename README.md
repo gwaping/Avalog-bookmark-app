@@ -1,6 +1,22 @@
 # AvaloqBookmarkApp
 
+Description:
+
+A bookmark Demo App that lets you add a bookmark with Name, Url and Group. 
+
+and shows a list of ALL bookmarks Group By "Groups" field. Also, has a functionality to delete a bookmark entry.
+
+Initial Screen:
+
+![image](https://user-images.githubusercontent.com/13413261/113333599-3542b700-9355-11eb-9c3b-d1f35d17399d.png)
+
+Added Bookmarks: 
+
+![image](https://user-images.githubusercontent.com/13413261/113334027-c154de80-9355-11eb-946a-fcec55952ebe.png)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+
 
 ## Development server
 
