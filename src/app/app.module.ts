@@ -8,6 +8,7 @@ import { MatButtonModule, MatCardModule, MatFormFieldModule, MatIconModule, MatI
 import { AddComponent } from './add/add.component';
 import { ListComponent } from './list/list.component';
 import { BookmarkReducer } from './reducers/bookmark.reducer';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,6 +20,8 @@ import { BookmarkReducer } from './reducers/bookmark.reducer';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatButtonModule,
     MatCardModule,
     MatFormFieldModule,

@@ -2,33 +2,50 @@
     
     <mat-card class="mat-elevation-z8">
 
-        <form class="example-form">
+        <form [formGroup]="bookmarkForm" (ngSubmit)="addBookmark(bookmarkForm.value)" class="example-form">
             <p>
                 <mat-form-field class="full-width">
                     <mat-label>Name</mat-label>
-                    <input matInput #name>
+                    <input matInput formControlName="Name">
+                    <mat-error *ngIf="!bookmarkForm.get('Name').valid">
+                        <div *ngIf="bookmarkForm.get('Name').value == '' || bookmarkForm.get('Name').value == null;">
+                            Name is Required.
+                        </div>
+                    </mat-error>
+                    
                 </mat-form-field>
             </p>
             
             <p>
                 <mat-form-field class="full-width">
                     <mat-label>Url</mat-label>
-                    <input matInput #url >
+                    <input matInput formControlName="Url" >
+                    <mat-error *ngIf="!bookmarkForm.get('Url').valid">
+                        <div *ngIf="bookmarkForm.get('Url').value == '' || bookmarkForm.get('Url').value == null;">
+                            Url is Required.
+                        </div>
+                    </mat-error>
+
                 </mat-form-field>
             </p>
             
             <p>
                 <mat-form-field class="full-width">
                     <mat-label>Group</mat-label>
-                    <input matInput #group >
+                    <input matInput formControlName="Group" >
+                    <mat-error *ngIf="!bookmarkForm.get('Group').valid">
+                        <div *ngIf="bookmarkForm.get('Group').value == '' || bookmarkForm.get('Group').value == null;">
+                            Group is Required.
+                        </div>
+                    </mat-error>
                 </mat-form-field>
             </p>
+
+            <button mat-raised-button color="primary" [disabled]="!bookmarkForm.valid" >Add Bookmark</button>
             
         </form>    
     
-        <button mat-raised-button color="primary" (click)="addBookmark( name.value, url.value, group.value)" >Add Bookmark</button>
-    
-
+      
     </mat-card>
  
 </div>
